@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom"
 import { Heart } from "lucide-react"
 
-export function Navbar() {
+ function Navbar() {
   const location = useLocation()
 
   const navItems = [
