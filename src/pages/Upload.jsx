@@ -1,7 +1,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import axios from "axios";
-import { Navbar } from "../components/shared/Navbar.jsx";
+import Navbar from "../components/shared/Navbar.jsx"
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
