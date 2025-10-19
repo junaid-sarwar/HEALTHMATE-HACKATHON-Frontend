@@ -28,20 +28,20 @@ export default function Dashboard() {
     const fetchDashboardData = async () => {
       try {
         // 🧭 Fetch user info
-        const userRes = await axios.get("http://localhost:8080/api/user/me", {
+        const userRes = await axios.get("https://healthmate-hackathon-backend.onrender.com/api/user/me", {
           withCredentials: true,
         });
         setUserName(userRes.data.user?.fullName || "User");
 
         // ⚡ Parallel fetch for files, insights & vitals
         const [filesRes, insightsRes, vitalsRes] = await Promise.all([
-          axios.get("http://localhost:8080/api/files/all", {
+          axios.get("https://healthmate-hackathon-backend.onrender.com/api/files/all", {
             withCredentials: true,
           }),
-          axios.get("http://localhost:8080/api/insights", {
+          axios.get("https://healthmate-hackathon-backend.onrender.com/api/insights", {
             withCredentials: true,
           }),
-          axios.get("http://localhost:8080/api/vitals/latest", {
+          axios.get("https://healthmate-hackathon-backend.onrender.com/api/vitals/latest", {
             withCredentials: true,
           }),
         ]);

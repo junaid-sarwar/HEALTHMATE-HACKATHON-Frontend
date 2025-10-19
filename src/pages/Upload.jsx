@@ -28,7 +28,7 @@ export default function UploadPage() {
 
   const fetchAllFiles = async () => {
     try {
-      const res = await axios.get("http://localhost:8080/api/files/all", {
+      const res = await axios.get("https://healthmate-hackathon-backend.onrender.com/api/files/all", {
         withCredentials: true,
       });
       if (res.data.success) setFiles(res.data.files);
@@ -69,7 +69,7 @@ export default function UploadPage() {
         formData.append("reportDate", reportDate || new Date().toISOString());
 
         const res = await axios.post(
-          "http://localhost:8080/api/files/upload",
+          "https://healthmate-hackathon-backend.onrender.com/api/files/upload",
           formData,
           {
             withCredentials: true,
@@ -95,7 +95,7 @@ export default function UploadPage() {
   const removeFile = async (id) => {
     if (!window.confirm("Are you sure you want to delete this file?")) return;
     try {
-      const res = await axios.delete(`http://localhost:8080/api/files/${id}`, {
+      const res = await axios.delete(`https://healthmate-hackathon-backend.onrender.com/api/files/${id}`, {
         withCredentials: true,
       });
       if (res.data.success)
@@ -109,7 +109,7 @@ export default function UploadPage() {
     try {
       alert("🤖 Analyzing report with AI... please wait");
       const res = await axios.post(
-        `http://localhost:8080/api/files/analyze/${fileId}`,
+        `https://healthmate-hackathon-backend.onrender.com/api/files/analyze/${fileId}`,
         {},
         { withCredentials: true }
       );

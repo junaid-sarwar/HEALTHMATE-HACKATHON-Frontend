@@ -26,7 +26,7 @@ export default function Home() {
     setError("");
 
     // ✅ Use absolute backend URL
-    const baseURL = "http://localhost:8080";
+    const baseURL = "https://healthmate-hackathon-backend.onrender.com";
     const url = showLogin
       ? `${baseURL}/api/user/login`
       : `${baseURL}/api/user/register`;

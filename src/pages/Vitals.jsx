@@ -26,7 +26,7 @@ export default function VitalsPage() {
   // Fetch latest vitals for summary
   const fetchLatestVitals = async () => {
     try {
-      const res = await fetch("http://localhost:8080/api/vitals/latest", {
+      const res = await fetch("https://healthmate-hackathon-backend.onrender.com/api/vitals/latest", {
         headers: { Authorization: `Bearer ${token}` },
       })
       const data = await res.json()
@@ -39,7 +39,7 @@ export default function VitalsPage() {
   // Fetch vitals history
   const fetchVitalsHistory = async () => {
     try {
-      const res = await fetch("http://localhost:8080/api/vitals/history", {
+      const res = await fetch("https://healthmate-hackathon-backend.onrender.com/api/vitals/history", {
         headers: { Authorization: `Bearer ${token}` },
       })
       const data = await res.json()
@@ -96,7 +96,7 @@ const token = document.cookie
   ?.split("=")[1];
 
 
-      const res = await fetch("http://localhost:8080/api/vitals/add", {
+      const res = await fetch("https://healthmate-hackathon-backend.onrender.com/api/vitals/add", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

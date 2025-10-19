@@ -12,7 +12,7 @@ export default function InsightsPage() {
   useEffect(() => {
     const fetchInsights = async () => {
       try {
-        const res = await axios.get("http://localhost:8080/api/insights", {
+        const res = await axios.get("https://healthmate-hackathon-backend.onrender.com/api/insights", {
           withCredentials: true,
         });
 
