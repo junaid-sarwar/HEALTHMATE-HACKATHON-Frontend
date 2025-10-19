@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { Navbar } from "../components/shared/Navbar";
+import { Navbar } from "../components/shared/Navbar.jsx";
 import { Card } from "@/components/ui/card";
 import { Brain, FileText, Stethoscope } from "lucide-react";
 

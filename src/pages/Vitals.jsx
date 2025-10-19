@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from "react"
-import { Navbar } from "../components/shared/Navbar"
+import { Navbar } from "../components/shared/Navbar.jsx"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
